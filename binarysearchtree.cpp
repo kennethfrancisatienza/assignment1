@@ -5,7 +5,6 @@ using namespace std;
 
 void insert(int, int);
 void delte(int);
-void display(int);
 int search(int);
 int search1(int, int);
 int tree[40], t = 1, s, x, i;
@@ -17,7 +16,7 @@ int main() {
 	while (1)
 	{
 
-		cout << "1.INSERT\n2.DELETE\n3.DISPLAY\n4.SEARCH\n5.EXIT\n\n\nEnter your choice: ";
+		cout << "1.INSERT\n2.DELETE\n3.SEARCH\n4.EXIT\n\n\nEnter your choice: ";
 		cin >> ch;
 		switch (ch)
 		{
@@ -34,20 +33,13 @@ int main() {
 			else cout << "\n\nNo such element in tree";
 			break;
 		case 3:
-			display(1);
-			cout << "\n";
-			for (int i = 0; i <= 32; i++)
-				cout << i;
-			cout << "\n";
-			break;
-		case 4:
 			cout << "\n\nEnter the element to search: ";
 			cin >> x;
 			y = search(1);
 			if (y == -1) cout << "\n\nNo such element in tree";
-			else cout << x << "is in" << y << "position";
+			else cout << "\n" << x << " is in position " << y;
 			break;
-		case 5:
+		case 4:
 			exit(0);
 		}
 		cout << "\n\n";
@@ -109,20 +101,6 @@ int search(int s)
 		search(2 * s + 1);
 	else
 		return s;
-}
-
-void display(int s)
-{
-	if (t == 1)
-	{
-		cout << "\n\nNo element in tree\n\n";
-		return;
-	}
-	for (int i = 1; i<40; i++)
-		if (tree[i] == -1)
-			cout << " ";
-		else cout << tree[i];
-		return;
 }
 
 int search1(int s, int ch)
