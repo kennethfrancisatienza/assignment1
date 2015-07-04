@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostrem>
 
 using namespace std;
 
@@ -45,9 +45,7 @@ int main() {
 		system("pause");
 		cout << "\n\n";
 	}
-
 }
-
 void insert(int s, int ch)
 {
 	int x;
