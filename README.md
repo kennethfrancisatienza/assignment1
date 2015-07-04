@@ -1,6 +1,6 @@
-# assignment1 Binary Search Tree C++
+# Assignment1 Binary Tree C++
 
-Binary Search Tree with Insert, Delete, Search functions.
+Binary Tree with Insert, Delete, Search functions.
 
 *Note: Program only accept integer values.
 
